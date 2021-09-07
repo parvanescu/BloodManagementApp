@@ -1,0 +1,40 @@
+<h2>All prescriptions</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Doctor Id
+    </td>
+    <td>
+      Person Id
+    </td>
+    <td>
+      Drugs
+    </td>
+    <td>
+      Release Date
+    </td>
+  </tr>
+  <tr *ngFor="let prescription of prescriptions">
+    <td>
+      {{prescription.id}}
+    </td>
+    <td>
+      {{prescription.doctorId}}
+    </td>
+    <td>
+      {{prescription.personId}}
+    </td>
+    <td>
+      <ul style="list-style-type: none">
+        <li *ngFor="let drug of prescription.drugs">{{drug.name}}</li>
+      </ul>
+    </td>
+    <td>
+      {{prescription.releaseDate}}
+    </td>
+  </tr>
+</table>

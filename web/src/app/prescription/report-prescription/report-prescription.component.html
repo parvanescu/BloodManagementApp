@@ -1,0 +1,50 @@
+<h1>
+  Get prescriptions by day
+</h1>
+
+<form [formGroup]="filteringForm" (ngSubmit)="getPrescriptions()">
+  <label>
+    Day:
+    <input formControlName="date" type="date">
+  </label>
+  <button>Get prescriptions</button>
+</form>
+
+<table *ngIf="prescriptions.length !== 0">
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Doctor Id
+    </th>
+    <th>
+      Person Id
+    </th>
+    <th>
+      Drugs
+    </th>
+    <td>
+      Release Date
+    </td>
+  </tr>
+  <tr *ngFor="let prescription of prescriptions">
+    <td>
+      {{prescription.id}}
+    </td>
+    <td>
+      {{prescription.doctorId}}
+    </td>
+    <td>
+      {{prescription.personId}}
+    </td>
+    <td>
+      <ul style="list-style-type: none">
+        <li *ngFor="let drug of prescription.drugs">{{drug.name}}</li>
+      </ul>
+    </td>
+    <td>
+      {{prescription.releaseDate}}
+    </td>
+  </tr>
+</table>

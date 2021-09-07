@@ -1,0 +1,21 @@
+<h2>Add new hospital</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="addHospital()">
+  <label for="id">
+    Id:
+    <input id="id" type="text" formControlName="id">
+  </label>
+  <label for="capacity">
+    Capacity:
+    <input id="capacity" type="text" formControlName="capacity">
+  </label>
+  <label for="name">
+    Name:
+    <input id="name" type="text" formControlName="name">
+  </label>
+  <label for="address">
+    Address:
+    <input id="address" type="text" formControlName="address">
+  </label>
+  <button type="submit">Add hospital</button>
+</form>

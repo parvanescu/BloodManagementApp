@@ -1,0 +1,33 @@
+<h1>
+  Filter for doctors with min years of experience
+</h1>
+<form [formGroup]="filteringForm" (ngSubmit)="getFilteredDoctors()">
+  <label>
+    Nr of years of experience:
+    <input type="text" formControlName="minYears">
+  </label>
+  <button>Filter!</button>
+</form>
+
+<table *ngIf="filteredDoctors.length !== 0">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Practicing since</th>
+    <th>Hospital id</th>
+  </tr>
+  <tr *ngFor="let doctor of filteredDoctors">
+    <td>
+      {{doctor.id}}
+    </td>
+    <td>
+      {{doctor.fullName}}
+    </td>
+    <td>
+      {{doctor.practicingSince}}
+    </td>
+    <td>
+      {{doctor.hospitalId}}
+    </td>
+  </tr>
+</table>

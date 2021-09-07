@@ -1,0 +1,26 @@
+<h2>All drugs</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Name
+    </td>
+    <td>
+      Recommended Amount
+    </td>
+  </tr>
+  <tr *ngFor="let drug of drugs">
+    <td>
+      {{drug.id}}
+    </td>
+    <td>
+      {{drug.name}}
+    </td>
+    <td>
+      {{drug.recommendedAmount}}
+    </td>
+  </tr>
+</table>

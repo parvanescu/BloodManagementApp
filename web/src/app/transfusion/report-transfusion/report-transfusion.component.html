@@ -1,0 +1,70 @@
+<h1>Donors</h1>
+<div *ngIf="donors.length != 0">
+  <mat-table [dataSource]="donors" class="mat-elevation-z8" >
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+      <mat-cell *matCellDef="let donor" >{{donor.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="fullName">
+      <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
+      <mat-cell *matCellDef="let donor">{{donor.fullName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let donor">{{donor.weight}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dateOfBirth">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let donor">{{donor.dateOfBirth}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="bloodType">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let donor">{{donor.bloodType}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>
+
+
+<h1>Receivers</h1>
+<div *ngIf="receivers.length != 0">
+  <mat-table [dataSource]="receivers" class="mat-elevation-z8" >
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+      <mat-cell *matCellDef="let receiver" >{{receiver.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="fullName">
+      <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
+      <mat-cell *matCellDef="let receiver">{{receiver.fullName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let receiver">{{receiver.weight}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dateOfBirth">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let receiver">{{receiver.dateOfBirth}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="bloodType">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let receiver">{{receiver.bloodType}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>

@@ -1,0 +1,40 @@
+<h2>All Persons</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Full Name
+    </td>
+    <td>
+      Weight
+    </td>
+    <td>
+      Date of Birth
+    </td>
+    <td>
+      Blood Type
+    </td>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td>
+      {{person.id}}
+    </td>
+    <td>
+      {{person.fullName}}
+    </td>
+    <td>
+      {{person.weight}}
+    </td>
+    <td>
+      {{person.dateOfBirth}}
+    </td>
+    <td>
+      {{person.bloodType}}
+    </td>
+  </tr>
+</table>
+
+<button (click)="getSorted()">Get sorted by weight</button>

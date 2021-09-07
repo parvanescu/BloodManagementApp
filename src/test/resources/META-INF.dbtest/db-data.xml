@@ -1,0 +1,16 @@
+<dataset>
+    <drug id="1" name="Paracetamol" recommendedAmount="2"/>
+    <drug id="2" name="Agocalmin" recommendedAmount="7"/>
+    <drug id="3" name="Drug3" recommendedAmount="9"/>
+    <drug id="4" name="Drug4" recommendedAmount="1"/>
+    <drug id="5" name="Drug5" recommendedAmount="11"/>
+
+    <hospital id="1" capacity="20" name="testHospital1" address="testAddr1"/>
+    <hospital id="2" capacity="30" name="testHospital2" address="testAddr2"/>
+    <hospital id="3" capacity="40" name="testHospital3" address="testAddr3"/>
+
+    <doctor id="1" name="testDoctor1" practicingSince="01-01-2020"/>
+    <doctor id="2" name="testDoctor2" practicingSince="01-01-2020"/>
+    <doctor id="3" name="testDoctor3" practicingSince="01-01-2020"/>
+    <doctor id="4" name="testDoctor4" practicingSince="01-01-2020"/>
+</dataset>

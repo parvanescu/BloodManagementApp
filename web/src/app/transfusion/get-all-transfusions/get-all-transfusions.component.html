@@ -1,0 +1,38 @@
+<h2>All transfusions</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Donor id
+    </td>
+    <td>
+      Receiver id
+    </td>
+    <td>
+      Doctor id
+    </td>
+    <td>
+      Units
+    </td>
+  </tr>
+  <tr *ngFor="let transfusion of transfusions">
+    <td>
+      {{transfusion.id}}
+    </td>
+    <td>
+      {{transfusion.donorId}}
+    </td>
+    <td>
+      {{transfusion.receiverId}}
+    </td>
+    <td>
+      {{transfusion.doctorId}}
+    </td>
+    <td>
+      {{transfusion.units}}
+    </td>
+  </tr>
+</table>

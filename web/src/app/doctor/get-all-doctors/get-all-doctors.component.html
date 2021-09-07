@@ -1,0 +1,32 @@
+<h2>All doctors</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Full Name
+    </td>
+    <td>
+      Practicing Since
+    </td>
+    <td>
+      Hospital Id
+    </td>
+  </tr>
+  <tr *ngFor="let doctor of doctors">
+    <td>
+      {{doctor.hospitalId}}
+    </td>
+    <td>
+      {{doctor.fullName}}
+    </td>
+    <td>
+      {{doctor.practicingSince}}
+    </td>
+    <td>
+      {{doctor.hospitalId}}
+    </td>
+  </tr>
+</table>

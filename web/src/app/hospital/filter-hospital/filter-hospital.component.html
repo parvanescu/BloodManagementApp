@@ -1,0 +1,27 @@
+<h1>Filtered hospitals</h1>
+<form [formGroup]="form">
+  <label>
+    Minimum capacity:
+    <input formControlName="minCapacity">
+  </label>
+</form>
+
+
+<div *ngIf="filteredHospitals.length !== 0">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Capacity</th>
+    </tr>
+    <tr *ngFor="let hospital of filteredHospitals">
+      <td>{{hospital.id}}</td>
+      <td>{{hospital.name}}</td>
+      <td>{{hospital.address}}</td>
+      <td>{{hospital.capacity}}</td>
+    </tr>
+  </table>
+</div>
+
+<button (click)="getFilteredHospitals()">Filter</button>

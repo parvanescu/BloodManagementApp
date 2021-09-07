@@ -1,0 +1,64 @@
+<h2>All hospitals</h2>
+
+<table>
+  <tr>
+    <td>
+      Id
+    </td>
+    <td>
+      Capacity
+    </td>
+    <td>
+      Name
+    </td>
+    <td>
+      Address
+    </td>
+  </tr>
+  <tr *ngFor="let hospital of hospitals">
+    <td (click)="getDetails(hospital.id)">
+      {{hospital.id}}
+    </td>
+    <td>
+      {{hospital.capacity}}
+    </td>
+    <td>
+      {{hospital.name}}
+    </td>
+    <td>
+      {{hospital.address}}
+    </td>
+  </tr>
+</table>
+
+<button (click)="sortHospitals()">Sort by capacity</button>
+
+<div *ngIf="hospitals.length != 0">
+  <mat-table [dataSource]="hospitals" class="mat-elevation-z8" >
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+      <mat-cell *matCellDef="let hospital" (click)="getDetails(hospital.id)" >{{hospital.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="capacity">
+      <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
+      <mat-cell *matCellDef="let hospital">{{hospital.capacity}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let hospital">{{hospital.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let hospital">{{hospital.address}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>
+

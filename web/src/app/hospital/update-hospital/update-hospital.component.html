@@ -1,0 +1,22 @@
+<select #t (change)="changeSelection(t.value)">
+  <option *ngFor="let hospital of hospitals">{{hospital.name}}</option>
+</select>
+<form [formGroup]="updateForm" (ngSubmit)="updateHospital()">
+  <label>
+    Id:
+    <input formControlName="id">
+  </label>
+  <label>
+    New name:
+    <input formControlName="name" value="">
+  </label>
+  <label>
+    New capacity:
+    <input formControlName="capacity" value="">
+  </label>
+  <label>
+    New address:
+    <input formControlName="address" value="">
+  </label>
+  <button>Update</button>
+</form>

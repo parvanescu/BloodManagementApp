@@ -1,0 +1,10 @@
+.vertical-menu-divider{
+  width: 10vw;
+  text-align: center;
+  border-right: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+
+.vertical-menu-divider hr{
+  width: 12rem;
+}

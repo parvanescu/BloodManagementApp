@@ -1,0 +1,24 @@
+<div *ngIf="hospitals.length!=0">
+  <form [formGroup]="doctorForm" (ngSubmit)="addHospital()">
+    <label>
+      Id:
+      <input type="text" formControlName="id">
+    </label>
+    <label>
+      Doctor name:
+      <input type="text" formControlName="name">
+    </label>
+    <label>
+      Practicing since:
+      <input type="date" formControlName="practicingSince">
+    </label>
+    <label>
+      Hospital name:
+    <select formControlName="hospital">
+      <option *ngFor="let hospital of hospitals">{{hospital.name}}</option>
+    </select>
+    </label>
+    <button>Add doctor</button>
+  </form>
+</div>
+

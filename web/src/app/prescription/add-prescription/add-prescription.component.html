@@ -1,0 +1,41 @@
+<h1>
+  Add new prescription
+</h1>
+
+<form [formGroup]="prescriptionForm" (ngSubmit)="addPrescription()">
+  <label>
+    Id:
+    <input type="text" formControlName="id">
+  </label>
+  <label>
+    Doctor:
+    <select formControlName="doctor">
+      <option *ngFor="let doctor of doctors" selected>{{doctor.fullName}}</option>
+    </select>
+  </label>
+  <label>
+    Person:
+    <select formControlName="person">
+      <option *ngFor="let person of persons" selected>{{person.fullName}}</option>
+    </select>
+  </label>
+  <label>
+    Drugs:
+    <select formControlName="drug">
+      <option *ngFor="let drug of drugs">{{drug.name}}</option>
+    </select>
+    <button type="button" (click)="addDrug()">Add drug</button>
+  </label>
+  <table *ngIf="selectedDrugs.length !== 0">
+    <tr>
+      <th>Drug name</th>
+      <th>Recommended Amount</th>
+    </tr>
+    <tr *ngFor="let drug of selectedDrugs">
+      <td>{{drug.name}}</td>
+      <td>{{drug.recommendedAmount}}</td>
+    </tr>
+  </table>
+
+  <button type="submit">Add prescription</button>
+</form>

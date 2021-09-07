@@ -1,0 +1,28 @@
+<p>Filtered person</p>
+
+<form (ngSubmit)="getFilteredPersons()" [formGroup]="filterForm">
+  <label>
+    Minimum weight:
+    <input type="text" formControlName="weight">
+  </label>
+  <button type="submit">Get filtered data</button>
+</form>
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Weight</td>
+    <td>Date of birth</td>
+    <td>Blood type</td>
+  </tr>
+  <tr *ngFor="let person of filteredPersons">
+    <td>{{person.id}}</td>
+    <td>{{person.fullName}}</td>
+    <td>{{person.weight}}</td>
+    <td>{{person.dateOfBirth}}</td>
+    <td>{{person.bloodType}}</td>
+  </tr>
+</table>
+
+

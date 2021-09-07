@@ -1,0 +1,12 @@
+<select #t (change)="updateHospitalId(t.value)">
+  <option *ngFor="let hospital of hospitals">{{hospital.name}}</option>
+</select>
+<button (click)="updatePopUp()">Delete</button>
+<div *ngIf="showConfirmation" class="confirmation">
+  <button (click)="deleteHospital()">
+    Yes, I am sure.
+  </button>
+  <button (click)="updatePopUp()">
+    No
+  </button>
+</div>
