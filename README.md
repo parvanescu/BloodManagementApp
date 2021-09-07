@@ -1,6 +1,6 @@
 # BloodManagementApp
- Stack used: 
 # 
+Stack used: 
 Java Spring Boot
 Postgresql
 Angular.ts
